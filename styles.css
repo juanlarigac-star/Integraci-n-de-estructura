@@ -1,3 +1,4 @@
+
 :root {
     --blanco: #D6E7D8;
     --oscuro: #787fe4;
@@ -6,6 +7,11 @@
     --gris: #757575;
     --beige: #f2ebd9;
     --marron: #4a4a4a;
+    --beigmr: #f4eee1;
+    --nedor: #2b1d16;
+    --orange:#b8863a;
+
+
 
 
     --fuente-principal: 3.8rem;
@@ -13,6 +19,7 @@
 
 html {
     font-size: 62.5%;
+    box-sizing: inherit;
 }
 
 /* color de todo el cuerpo de la pagina y tipo de letra */
@@ -35,11 +42,13 @@ span {
     font-size: 1rem;
 }
 
+/* Seccion de encabezado mostrando las redes e inforamcion de usuario */
+
 .info{
     display: flex;
     justify-content:space-around;
     align-items: left;
-    padding: 10px 4px;
+    padding: 5px 4px;
     font-size: 11px;
     text-transform: uppercase;
     color: var(--marron);
@@ -53,7 +62,141 @@ span {
 }
 
 .social-icons a {
-    color: #4a4a4a;
+    color:var(--marron);
     text-decoration: none;
     
+}
+
+/* contenido de navegacion dentro del header  */
+
+
+/* Contenedor principal se alinea todo en una fila */
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    background-color: var(--beigmr);
+    flex-wrap: wrap;
+}
+/* Parte superior del logo */
+.logo_up{
+    display: block;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+
+/* logo de la panaderia  */
+.logo_main{
+    margin: 2.5rem;
+    font-size: 3.5rem;
+    padding: 0rem 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    text-align: center;
+}
+
+.logo_down{
+    display: block;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+/* repositorio del menu de navegacion alineacion de enlaces */
+.lista-nav{
+    display: flex;
+    gap: 1.5rem;
+    padding: 0%;
+    margin: 0%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Estilos de los enlaces del menu */
+.nav-item{
+    text-decoration: none;
+    color: var(--nedor);
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 1.5rem;
+    border-bottom: 0.2rem solid transparent;
+    white-space: nowrap;
+}
+
+
+/* estilo del boton para ordenar  */
+
+.btn-order {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: var(--marron);
+    color: var(--blanco);
+    padding: 1rem 2.5rem;
+    border-radius: 3rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+}
+
+.btn-order:hover {
+    background-color: #6b3f28;
+    border-color: #6b3f28;
+    transform: scale(1.03);
+}
+
+
+
+
+
+
+
+/* Generar responsividad para pantallas mas pequeñas */
+@media (max-width: 768px){
+    .contenedor{
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .nav-contenedor{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+
+    }
+
+    .lista-nav{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+}
+
+@media(max-width:768px){
+    .logo_main{
+        font-size: 2.8rem;
+        letter-spacing: 0.4rem;
+    }
+
+    .nav-item{
+        font-size: 1.4rem;
+        
+    }
+
+    .btn-order{
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
 }
