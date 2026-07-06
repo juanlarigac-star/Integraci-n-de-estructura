@@ -176,6 +176,7 @@ span {
 
     }
 
+
     .lista-nav{
         flex-wrap: wrap;
         justify-content: center;
@@ -195,6 +196,11 @@ span {
         font-size: 1rem;
     }
 
+    .btn-open{
+        padding: 0.7rem 2rem;
+        font-size: 0.85rem;
+    }
+
 }
 
 @media(max-width:768px){
@@ -206,9 +212,6 @@ span {
         gap: 1.5rem;
         padding: 2.5rem 3rem;
         margin-top: auto;
-
-       
-
 
     }
 
@@ -233,37 +236,124 @@ span {
 
     }
 
-    /* .main-contenedor{
+    .contend{
 
-        text-align: center;
-        gap: 1.5rem;
-        padding: 2.5rem 2rem;
-        margin-top: auto;
-        width: 90%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    } */
+        /* text-align: center; */
+        gap: 0.7rem;
+        padding: 1.8rem 2rem;
+        /* margin-top: auto; */ 
+        max-width: 380px;
+        width: 92%;
+        /* top: 50%; */
+        /* transform: translate(-50%, -50%); */
+    }
+
+    .main-title h1{
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .descripcion{
+        font-size: 0.85rem;
+        line-height: 1.4;
+        padding: 0 0.3rem;
+    }
 
     .subt-top, .main-title, .subt-botton{
         text-align: center;
         width: 100%;
     }
 
-    .subt-botton{
+    /* .subt-botton{
         flex-direction: column;
         gap: 1rem;
         text-align: center;
         width: 100%;
         gap: 1rem;
-    }
+    } */
 
 
     .btn-open{
-        padding: 1.2rem;
+        padding: 0.6rem 1.8rem;
+        font-size: 0.8rem;
     }
 
 }
 
+/* Moviles */
+@media(max-width:480px){
+    .main{
+        min-height: 40rem;
+        height: 70vw;
+    }
+
+    .contend{
+        max-width: 32rem;
+        min-width: 20rem;
+        padding: 1.5rem 1.5rem;
+        gap: 0.6rem;
+        border-radius: 1.5rem;
+        width: 95%;
+    }
+    .main-subt{
+        font-size: 1.1rem;
+        letter-spacing: 0.03rem;
+
+    }
+
+    .main-title h1{
+        font-size: 1.4rem;
+        letter-spacing: 0.05rem;
+    }
+
+    .descripcion{
+        font-size: 0.75rem;
+        line-height: 1.4rem;
+        padding: 0;
+
+    }
+    .btn-open{
+        padding: 0.5rem 1.5rem;
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+    .logo_main {
+        font-size: 2.8rem;
+        letter-spacing: 0.4rem;
+        padding: 0rem 2rem;
+    }
+    .contenedor {
+        padding: 2rem 1.5rem;
+    }
+
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 360px) {
+    .contend {
+        max-width: 280px;
+        padding: 1.2rem 1rem;
+        gap: 0.5rem;
+    }
+
+    .main-subt {
+        font-size: 0.95rem;
+    }
+
+    .main-title h1 {
+        font-size: 1.2rem;
+    }
+
+    .descripcion {
+        font-size: 0.65rem;
+        line-height: 1.3;
+    }
+
+    .btn-open {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.6rem;
+    }
+}
 
 
 
@@ -297,25 +387,24 @@ span {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 43rem;
     transform: translate(-50%, -75%);
-    width: ;
-    height: ;
-    max-width: 40rem;
-    min-height: 20rem;
-    padding: 5rem 3rem;
-    box-sizing: border-box;
+    max-width: 90rem;
+    min-height: 15rem;
+    padding: 4rem 3rem;
+    /* box-sizing: border-box; */
     /* bottom: 1.5rem; Se ubica en la zona baja de la tarjeta blanca */
     background-color: transparent;
     /* backdrop-filter: blur(1rem); */
-    -webkit-backdrop-filter: blur(1rem);
+    /* -webkit-backdrop-filter: blur(1rem); */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
-    gap: 1.2rem;
+    gap: 0.8rem;
     border-radius: 2rem;
-    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.15);
+    /* box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.15); */
 
     /* margin: 1rem; */
     z-index: 1;
@@ -328,30 +417,38 @@ span {
     /* flex: 1; */
     /* text-align: center; */
     width: 100%;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
+
+
 }
 
 .main-subt{
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     /* font-weight: 300; */
-    color: var(--marron);
+    color: var(--blacked);
     line-height: 1.3;
     margin: 0;
     letter-spacing: 0.05rem;
     animation: fadeInDown 0.8s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    letter-spacing: 0.2rem;
     
 }
 
 /* titulo principal */
 .main-title h1{
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     font-weight: bold;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
     margin: 0 0 1.5rem 0;
     line-height: 1.2;
     animation: fadeInDown 1s ease;
     text-transform: none;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 .main-title br{
@@ -369,9 +466,12 @@ span {
     line-height: 1.6;
     color: var(--marron);
     margin: 0;
-    padding: 0;
+    padding: 0 0.1rem;
     animation: fadeInUp 0.8s ease 0.3s both;
-    font-weight: 400;
+    font-weight: 600;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 /* Boton open now */
@@ -383,12 +483,13 @@ span {
     font-family: sans-serif;
     background-color: var(--black);
     color: var(--beige);
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     border-radius: 1.1rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     white-space: nowrap;
     transition: all 0.3s ease;
+    cursor: pointer;
     animation: fadeInUp 1s ease 0.6s both;
 
 }
@@ -418,8 +519,3 @@ span {
     }
 }
 
-/* .main-contenedor {
-    width: fit-content !important;
-    padding: 2.5rem 3rem !important;
-    min-height: auto !important;
-} */
