@@ -521,13 +521,16 @@ span {
 }
 
 .second{
-    padding: 3rem 2rem;
+    /* padding: 3rem 2rem; */
     background-color: var(--beige);
     /* display: flex; */
     justify-content: center;
     padding: 0.1rem;
     align-items: center;
-    width: 100%;
+    /* width: 100%; */
+    padding: 5px 4px;
+    /* margin:0 10rem 0 10rem; */
+    
     
 }
 
@@ -560,7 +563,6 @@ span {
 .descrip h2{
     font-size: 2.5rem;
     color: var(--marron);
-    text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0.2rem;
 }
@@ -643,4 +645,179 @@ span {
     text-align: center;
     cursor: pointer;
     margin-top: auto;
+}
+
+.third {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 5rem;
+    width: 100%;
+    max-width: 100%;
+    color: var(--marron);
+    background-color: var(--beigmr);
+    box-sizing: border-box;
+}
+
+/* Descripción - lado izquierdo */
+.description {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.description h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--marron);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 1rem 0;
+}
+
+.description p {
+    font-size: 1rem;
+    color: var(--gris);
+    line-height: 1.8;
+    margin: 0 0 1.5rem 0;
+}
+
+.description .card-btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: var(--black);
+    color: var(--beige);
+    padding: 0.8rem 2.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--black);
+    cursor: pointer;
+}
+
+.description .card-btn:hover {
+    background-color: #6b3f28;
+    border-color: #6b3f28;
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(74, 44, 27, 0.3);
+}
+
+
+.visit-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    gap: 1.5rem;
+    flex: 1;
+    max-width: 50%;
+    
+}
+
+/* ========== CADA IMAGEN ========== */
+.bake-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #d4b896;
+
+}
+
+.bake-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.bake-image:hover img {
+    transform: scale(1.05);
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .third {
+        padding: 3rem 2rem;
+        gap: 2rem;
+    }
+
+    .description h2 {
+        font-size: 2rem;
+    }
+
+    .bake-image {
+        height: 200px;
+    }
+}
+
+/* Móviles grandes y tablets */
+@media (max-width: 768px) {
+    .third {
+        flex-direction: column;
+        padding: 3rem 2rem;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .description {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .description h2 {
+        font-size: 1.8rem;
+    }
+
+    .description p {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+
+    .visit-images {
+        max-width: 100%;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .bake-image {
+        height: 200px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .third {
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .description h2 {
+        font-size: 1.5rem;
+    }
+
+    .description p {
+        font-size: 0.85rem;
+    }
+
+    .description .card-btn {
+        padding: 0.6rem 2rem;
+        font-size: 0.8rem;
+    }
+
+    .visit-images {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        gap: 1rem;
+        max-width: 100%;
+    }
+
+    .bake-image {
+        height: 200px;
+    }
 }
